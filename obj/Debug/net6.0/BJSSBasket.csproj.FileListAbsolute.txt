@@ -1,0 +1,15 @@
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\BJSSBasket.exe
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\BJSSBasket.deps.json
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\BJSSBasket.runtimeconfig.json
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\BJSSBasket.dll
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\ref\BJSSBasket.dll
+C:\Users\07hkhan\source\repos\BJSSBasket\bin\Debug\net6.0\BJSSBasket.pdb
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.AssemblyInfoInputs.cache
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.AssemblyInfo.cs
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.csproj.CoreCompileInputs.cache
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.dll
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\ref\BJSSBasket.dll
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.pdb
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.genruntimeconfig.cache
+C:\Users\07hkhan\source\repos\BJSSBasket\obj\Debug\net6.0\BJSSBasket.csproj.AssemblyReference.cache
