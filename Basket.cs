@@ -1,5 +1,5 @@
 ﻿using BJSSBasket.Items;
-using BJSSBasket.Items.Offers;
+
 using System.Linq;
 
 namespace BJSSBasket
@@ -35,26 +35,6 @@ namespace BJSSBasket
             return subtotal;
         }
 
-        //helper methods for cheking in dicount rules
-        
-        public bool CheckBasketContains(IItem item) 
-        {
-            return _basket.Contains(item);
-        }
-
-        public int CountItemFreqency(IItem item) 
-        {
-            return _basket.Count(x => x == item);
-        }
-
-        //attempt at a rule engine doesn't work :(
-        public Basket ApplyDiscounts(Basket basket) 
-        {
-            var bastketWithDiscounts = new SpecialOfferService().ProcessDiscount(basket);
-
-            return bastketWithDiscounts;
-        
-        }
 
         //apply apple 10% discount
         public bool ApplyAppleDiscounts() 
@@ -65,7 +45,7 @@ namespace BJSSBasket
             { 
                 if (item is Apples) 
                 { 
-                    item.intsancePrice = item.intsancePrice / 1.10m;
+                    item.intsancePrice = Decimal.Round(item.intsancePrice / 1.10m, 1);
                     discountActive = true;
                 } 
             }
@@ -98,26 +78,20 @@ namespace BJSSBasket
             
             ApplyAppleDiscounts();
 
-            foreach (var item in _basket) { total += item.intsancePrice; }
+            ApplyTinBreadDiscount();
+
+            total = Subtotal();
 
             return total;
         }
 
-
-        
-
-        //private bool CheckForApples() 
-        //{
-        //    foreach(var item in _basket) { if (item is Apples) return true; }
-
-        //    return false;
-        
-        //}
-        
+        public void Emptybaseket() 
+        {
+            _basket.Clear();
+        }
 
 
-       // public decimal Total() {  }
-
+  
 
 
 

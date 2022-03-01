@@ -4,19 +4,8 @@
     {
         static void Main()
         {
-            //try 
-            //{ 
-            //    var consoleArgs = Console.ReadLine(); 
-            //}
-            //catch (Exception ex) 
-            //{
-            //    Console.WriteLine("somthing went wrong");
-            //    Console.WriteLine(ex);
-            //    Environment.Exit(1);
-            //}
-
+            
             bool endapp = false;
-
 
 
             while (endapp == false)
@@ -30,7 +19,7 @@
              
                     app.argToItem();
                     app.writeSubtotal();
-                    //app.applyDiscounts();   
+                    app.writeTotal();   
                 }
                 catch (ArgumentNullException)
                 {
@@ -51,8 +40,7 @@
                 }
 
 
-               
-                app.printArgs();
+            
 
             }
         }
