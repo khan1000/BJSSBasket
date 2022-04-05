@@ -4,7 +4,7 @@
     {
         static void Main()
         {
-            
+
             bool endapp = false;
 
 
@@ -16,36 +16,33 @@
                 try
                 {
                     app.feedArgs(Console.ReadLine().Trim());
-             
+
                     app.argToItem();
                     app.writeSubtotal();
-                    app.writeTotal();   
+                    app.writeTotal();
                 }
                 catch (ArgumentNullException)
                 {
                     Console.WriteLine("please input");
-                    
+
                     continue;
                 }
-                catch (ArgumentException ex) 
-                { 
+                catch (ArgumentException ex)
+                {
                     Console.WriteLine($"one or more of the flowing items does not exist: {ex.Message}");
                     continue;
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
-                   
+
                     continue;
                 }
-
-
-            
 
             }
         }
 
-    
+
 
 
 

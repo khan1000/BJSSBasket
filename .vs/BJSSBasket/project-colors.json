@@ -5,7 +5,17 @@
       "ProjectGuid": "5f584704-639b-4dfd-bd78-944108fcca10",
       "DisplayName": "BJSSBasket",
       "ColorIndex": 0
+    },
+    "6d097018-01b7-42dc-93ac-5752c48e1ed1": {
+      "ProjectGuid": "6d097018-01b7-42dc-93ac-5752c48e1ed1",
+      "DisplayName": "BJSSBaskettests",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

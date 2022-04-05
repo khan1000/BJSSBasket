@@ -1,19 +1,10 @@
 ﻿using BJSSBasket.Items;
 
-using System.Linq;
-
 namespace BJSSBasket
 {
     public class Basket
     {
         private List<IItem> _basket { get; set; }
-
-
-        public Basket(IItem item)
-        {
-            _basket = new List<IItem>();
-
-        }
 
         public Basket()
         {
@@ -25,7 +16,7 @@ namespace BJSSBasket
             _basket.Add(item);
 
         }
-
+        //raw price without discounts
         public decimal Subtotal()
         {
             decimal subtotal = 0;
@@ -37,33 +28,33 @@ namespace BJSSBasket
 
 
         //apply apple 10% discount
-        public bool ApplyAppleDiscounts() 
+        public bool ApplyAppleDiscounts()
         {
-            bool discountActive = false; 
-            
-            foreach (var item in _basket) 
-            { 
-                if (item is Apples) 
-                { 
+            bool discountActive = false;
+
+            foreach (var item in _basket)
+            {
+                if (item is Apples)
+                {
                     item.intsancePrice = Decimal.Round(item.intsancePrice / 1.10m, 1);
                     discountActive = true;
-                } 
+                }
             }
-            
+
             return discountActive;
 
         }
 
         //apply 2 for half price rules
-        public bool ApplyTinBreadDiscount() 
+        public bool ApplyTinBreadDiscount()
         {
             bool discountActive = false;
 
             int soupnumber = 0;
-            
+
             foreach (var item in _basket) { if (item is Soup) soupnumber++; }
 
-            if (soupnumber >= 2) 
+            if (soupnumber >= 2)
             {
                 discountActive = true;
                 foreach (var item in _basket) { if (item is Bread) { item.intsancePrice = item.intsancePrice / 2m; }; }
@@ -72,10 +63,10 @@ namespace BJSSBasket
             return discountActive;
         }
 
-        public decimal Total() 
+        public decimal Total()
         {
             decimal total = 0;
-            
+
             ApplyAppleDiscounts();
 
             ApplyTinBreadDiscount();
@@ -85,13 +76,14 @@ namespace BJSSBasket
             return total;
         }
 
-        public void Emptybaseket() 
+        //for testing purposes
+        public void Emptybaseket()
         {
             _basket.Clear();
         }
 
 
-  
+
 
 
 

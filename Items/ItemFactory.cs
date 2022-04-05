@@ -7,16 +7,20 @@
         {
             switch (itemtype.Trim())
             {
-                case "Apples": case "apples":
+                case "Apples":
+                case "apples":
                     return new Apples();
 
-                case "Bread": case "bread":
+                case "Bread":
+                case "bread":
                     return new Bread();
 
-                case "Milk": case "milk":
+                case "Milk":
+                case "milk":
                     return new Milk();
 
-                case "Soup": case "soup":
+                case "Soup":
+                case "soup":
                     return new Soup();
 
                 default:

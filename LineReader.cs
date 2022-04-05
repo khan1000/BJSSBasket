@@ -18,19 +18,19 @@ namespace BJSSBasket
         public void printArgs()
         {
 
-            foreach (var arg in _args) { Console.WriteLine( $"{arg}"); }
+            foreach (var arg in _args) { Console.WriteLine($"{arg}"); }
 
         }
 
         public void feedArgs(string args)
         {
-            
+
             if (args == null || args == "") throw new ArgumentNullException();
 
             string arg = args;
 
             _args = arg.Split(" ");
-           
+
         }
 
         public void argToItem()
@@ -41,16 +41,16 @@ namespace BJSSBasket
                 {
                     _basket.Additem(ItemFactory.createItem(arg));
                 }
-                catch (ArgumentException) 
+                catch (ArgumentException)
                 {
                     throw;
                 }
 
             }
-           
+
         }
 
-        public void writeSubtotal() 
+        public void writeSubtotal()
         {
             Console.WriteLine($"Subtotal: £{_basket.Subtotal()} \n");
         }
@@ -59,11 +59,11 @@ namespace BJSSBasket
         public void writeTotal()
         {
             decimal subtotal = _basket.Subtotal();
-            
+
 
             var appleDiscountActive = _basket.ApplyAppleDiscounts();
             var breadDiscountActive = _basket.ApplyTinBreadDiscount();
-            
+
 
             decimal postDiscountSubtotal = _basket.Subtotal();
 
@@ -75,8 +75,6 @@ namespace BJSSBasket
 
             Console.WriteLine($"Total: £{_basket.Subtotal():F2}");
         }
-
-
 
 
     }
